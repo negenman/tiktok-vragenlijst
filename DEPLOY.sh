@@ -82,4 +82,5 @@ echo ""
 echo "⏰ Het kan 1-2 minuten duren voordat de site live is."
 echo ""
 echo "🔗 Repository: https://github.com/$USERNAME/$REPO_NAME"
-echo ""
+echo "cd tiktok-vragenlijst-github
+./DEPLOY.sh"
