@@ -1,0 +1,9 @@
+Dit bestand bevat de template voor het genereren van het complete formulier.
+
+Gezien de omvang (15 secties met 80+ vragen), is het praktischer om:
+1. Een generator script te gebruiken
+2. Of een bestaande form builder tool
+3. Of secties handmatig te dupliceren
+
+Het basisformulier met secties 1-3 is gemaakt als voorbeeld.
+Dupliceer de sectie-structuur voor de overige 12 secties.
