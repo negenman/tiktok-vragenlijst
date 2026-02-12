@@ -186,12 +186,738 @@
 
         <div class="form-content">
             <form id="tiktokForm">
+                <!-- Algemene Informatie -->
+                <div class="section">
+                    <h2 class="section-title">
+                        <span class="section-number">📋</span>
+                        Algemene Informatie
+                    </h2>
+                    <div class="info-fields">
+                        <div class="info-field">
+                            <label for="omroep">Omroep/Programma Redactie *</label>
+                            <input type="text" id="omroep" name="omroep" required>
+                        </div>
+                        <div class="info-field">
+                            <label for="namen">Namen *</label>
+                            <input type="text" id="namen" name="namen" required>
+                        </div>
+                        <div class="info-field">
+                            <label for="tiktokAccount">TikTok Account *</label>
+                            <input type="text" id="tiktokAccount" name="tiktokAccount" required>
+                        </div>
+                        <div class="info-field">
+                            <label for="ingevuldDoor">Ingevuld Door *</label>
+                            <input type="text" id="ingevuldDoor" name="ingevuldDoor" required>
+                        </div>
+                    </div>
+                </div>
 
-                <!-- COMPLETE FORMULIER HIER -->
-                <p style="text-align: center; padding: 40px; color: #666;">
-                    ⚠️ Dit formulier wordt gegenereerd door generate-form.py<br>
-                    Voer het script uit om het volledige formulier te genereren
-                </p>
+                <!-- 1. Account & Profiel -->
+                <div class="section">
+                    <h2 class="section-title"><span class="section-number">1</span>Account & Profiel</h2>
+
+                    <div class="question-group">
+                        <label class="question-label">Wat voor type TikTok-account hebben jullie?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" id="at1" name="accountType" value="Personal"><label for="at1">Personal</label></div>
+                            <div class="radio-item"><input type="radio" id="at2" name="accountType" value="Creator"><label for="at2">Creator</label></div>
+                            <div class="radio-item"><input type="radio" id="at3" name="accountType" value="Business"><label for="at3">Business</label></div>
+                            <div class="radio-item"><input type="radio" id="at4" name="accountType" value="Weet niet"><label for="at4">Weet niet</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Wat is de doelgroep van jullie TikTok-account? (meerdere antwoorden mogelijk)</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item"><input type="checkbox" name="targetAudience" value="Algemeen publiek (18+)"><label>Algemeen publiek (18+)</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="targetAudience" value="Jongvolwassenen (18-25 jaar)"><label>Jongvolwassenen (18-25 jaar)</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="targetAudience" value="Professionals/zakelijk"><label>Professionals/zakelijk</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="targetAudience" value="Ook minderjarigen (13-18 jaar)"><label>Ook minderjarigen (13-18 jaar)</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="targetAudience" value="Specifieke doelgroep"><label>Specifieke doelgroep, namelijk:</label></div>
+                        </div>
+                        <input type="text" class="text-input" name="targetAudienceSpecific" placeholder="Specificeer indien van toepassing">
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Wat voor type content plaatsen jullie op TikTok? (meerdere antwoorden mogelijk)</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item"><input type="checkbox" name="contentType" value="Fragmenten uit uitzendingen"><label>Fragmenten uit uitzendingen</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="contentType" value="Behind-the-scenes content"><label>Behind-the-scenes content</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="contentType" value="Speciaal voor TikTok gemaakte content"><label>Speciaal voor TikTok gemaakte content</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="contentType" value="Hergebruikte content van andere social media"><label>Hergebruikte content van andere social media</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="contentType" value="Live-content"><label>Live-content</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="contentType" value="User-generated content"><label>User-generated content (van kijkers/volgers)</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="contentType" value="Anders"><label>Anders, namelijk:</label></div>
+                        </div>
+                        <input type="text" class="text-input" name="contentTypeOther" placeholder="Specificeer indien van toepassing">
+                    </div>
+                </div>
+
+                <!-- 2. Functionaliteiten -->
+                <div class="section">
+                    <h2 class="section-title"><span class="section-number">2</span>Functionaliteiten</h2>
+                    <div class="question-group">
+                        <label class="question-label">Welke functionaliteiten gebruiken jullie? (meerdere antwoorden mogelijk)</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item"><input type="checkbox" name="features" value="Like-functie"><label>Like-functie</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="features" value="Comment-functie"><label>Comment-functie</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="features" value="Deel-functie (share)"><label>Deel-functie (share)</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="features" value="Live-functie"><label>Live-functie</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="features" value="Live Photo/GIF-functie"><label>Live Photo/GIF-functie</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="features" value="Download-functie"><label>Download-functie (content downloadbaar maken)</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="features" value="React/Duet-functie"><label>React/Duet-functie</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="features" value="Stitch-functie"><label>Stitch-functie (aanhechten)</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="features" value="Hergebruiken audio"><label>Hergebruiken audio</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="features" value="TikTok Stories"><label>TikTok Stories</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="features" value="Polls"><label>Polls (peilingen) in video's</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="features" value="Q&A functie"><label>Q&A functie</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="features" value="Voiceover"><label>Voiceover toevoegen</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="features" value="Text-to-speech"><label>Text-to-speech</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="features" value="Groene scherm"><label>Groene scherm (green screen) effect</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="features" value="AR-effecten"><label>AR-effecten</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="features" value="Video templates"><label>Video templates</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="features" value="Link in bio"><label>Link in bio</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="features" value="Pinned videos"><label>Pinned videos (vastgezette video's)</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="features" value="Anders"><label>Anders, namelijk:</label></div>
+                        </div>
+                        <input type="text" class="text-input" name="featuresOther" placeholder="Specificeer indien van toepassing">
+                    </div>
+                </div>
+
+                <!-- 3. Interactie-instellingen -->
+                <div class="section">
+                    <h2 class="section-title"><span class="section-number">3</span>Interactie-instellingen</h2>
+
+                    <div class="question-group">
+                        <label class="question-label">Wie mag reageren op jullie posts?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="whoCanComment" value="Iedereen"><label>Iedereen</label></div>
+                            <div class="radio-item"><input type="radio" name="whoCanComment" value="Alleen volgers"><label>Alleen volgers</label></div>
+                            <div class="radio-item"><input type="radio" name="whoCanComment" value="Niemand"><label>Niemand</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Wie mag duetten maken met jullie content?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="whoCanDuet" value="Iedereen"><label>Iedereen</label></div>
+                            <div class="radio-item"><input type="radio" name="whoCanDuet" value="Alleen volgers"><label>Alleen volgers</label></div>
+                            <div class="radio-item"><input type="radio" name="whoCanDuet" value="Uit"><label>Uit</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Wie mag stitches maken met jullie content?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="whoCanStitch" value="Iedereen"><label>Iedereen</label></div>
+                            <div class="radio-item"><input type="radio" name="whoCanStitch" value="Alleen volgers"><label>Alleen volgers</label></div>
+                            <div class="radio-item"><input type="radio" name="whoCanStitch" value="Uit / Nvt"><label>Uit / Nvt</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Wie mag jullie video's downloaden?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="whoCanDownload" value="Iedereen"><label>Iedereen</label></div>
+                            <div class="radio-item"><input type="radio" name="whoCanDownload" value="Alleen volgers"><label>Alleen volgers</label></div>
+                            <div class="radio-item"><input type="radio" name="whoCanDownload" value="Uit"><label>Uit</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Staan reacties standaard aan?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="commentsDefault" value="Ja"><label>Ja</label></div>
+                            <div class="radio-item"><input type="radio" name="commentsDefault" value="Nee"><label>Nee</label></div>
+                            <div class="radio-item"><input type="radio" name="commentsDefault" value="Per video verschillend"><label>Per video verschillend</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Kunnen andere gebruikers jullie account taggen in hun content?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="whoCanTag" value="Iedereen"><label>Iedereen</label></div>
+                            <div class="radio-item"><input type="radio" name="whoCanTag" value="Alleen volgers"><label>Alleen volgers</label></div>
+                            <div class="radio-item"><input type="radio" name="whoCanTag" value="Uit"><label>Uit</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Maken jullie gebruik van geoblocking op TikTok?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="geoblocking" value="Ja, voor specifieke content"><label>Ja, voor specifieke content</label></div>
+                            <div class="radio-item"><input type="radio" name="geoblocking" value="Ja, voor alle content"><label>Ja, voor alle content</label></div>
+                            <div class="radio-item"><input type="radio" name="geoblocking" value="Nee"><label>Nee</label></div>
+                            <div class="radio-item"><input type="radio" name="geoblocking" value="Weet niet"><label>Weet niet</label></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Content & Hashtags -->
+                <div class="section">
+                    <h2 class="section-title"><span class="section-number">4</span>Content & Hashtags</h2>
+
+                    <div class="question-group">
+                        <label class="question-label">Hebben jullie een beleid voor hashtaggebruik?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="hashtagPolicy" value="Ja, schriftelijk vastgelegd"><label>Ja, schriftelijk vastgelegd</label></div>
+                            <div class="radio-item"><input type="radio" name="hashtagPolicy" value="Ja, maar niet schriftelijk"><label>Ja, maar niet schriftelijk</label></div>
+                            <div class="radio-item"><input type="radio" name="hashtagPolicy" value="Nee"><label>Nee</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Gebruiken jullie een eigen branded hashtag?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="brandedHashtag" value="Ja"><label>Ja</label></div>
+                            <div class="radio-item"><input type="radio" name="brandedHashtag" value="Nee"><label>Nee</label></div>
+                            <div class="radio-item"><input type="radio" name="brandedHashtag" value="Meerdere"><label>Meerdere</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Gebruiken jullie trending hashtags?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="trendingHashtags" value="Ja, regelmatig"><label>Ja, regelmatig</label></div>
+                            <div class="radio-item"><input type="radio" name="trendingHashtags" value="Ja, soms"><label>Ja, soms</label></div>
+                            <div class="radio-item"><input type="radio" name="trendingHashtags" value="Nee"><label>Nee</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Gebruiken jullie locatietags?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="locationTags" value="Ja, altijd"><label>Ja, altijd</label></div>
+                            <div class="radio-item"><input type="radio" name="locationTags" value="Ja, soms"><label>Ja, soms</label></div>
+                            <div class="radio-item"><input type="radio" name="locationTags" value="Nee"><label>Nee</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Taggen jullie andere accounts?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="tagOtherAccounts" value="Ja, regelmatig"><label>Ja, regelmatig</label></div>
+                            <div class="radio-item"><input type="radio" name="tagOtherAccounts" value="Ja, soms"><label>Ja, soms</label></div>
+                            <div class="radio-item"><input type="radio" name="tagOtherAccounts" value="Nee"><label>Nee</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Gebruiken jullie hashtags die gevoelige of bijzondere persoonsgegevens bevatten?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="sensitiveHashtags" value="Ja"><label>Ja</label></div>
+                            <div class="radio-item"><input type="radio" name="sensitiveHashtags" value="Nee"><label>Nee</label></div>
+                            <div class="radio-item"><input type="radio" name="sensitiveHashtags" value="Weet niet"><label>Weet niet</label></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Advertenties & Promotie -->
+                <div class="section">
+                    <h2 class="section-title"><span class="section-number">5</span>Advertenties & Promotie</h2>
+
+                    <div class="question-group">
+                        <label class="question-label">Adverteren jullie op TikTok?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="advertising" value="Ja, regelmatig"><label>Ja, regelmatig</label></div>
+                            <div class="radio-item"><input type="radio" name="advertising" value="Ja, soms geprobeerd"><label>Ja, soms geprobeerd</label></div>
+                            <div class="radio-item"><input type="radio" name="advertising" value="Nee"><label>Nee</label></div>
+                            <div class="radio-item"><input type="radio" name="advertising" value="Gepland"><label>Gepland</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Promoten jullie organische posts (boosten)?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="promotePosts" value="Ja, regelmatig"><label>Ja, regelmatig</label></div>
+                            <div class="radio-item"><input type="radio" name="promotePosts" value="Ja, soms"><label>Ja, soms</label></div>
+                            <div class="radio-item"><input type="radio" name="promotePosts" value="Nee"><label>Nee</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Werken jullie samen met TikTok-creators?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="workWithCreators" value="Ja, regelmatig"><label>Ja, regelmatig</label></div>
+                            <div class="radio-item"><input type="radio" name="workWithCreators" value="Ja, soms"><label>Ja, soms</label></div>
+                            <div class="radio-item"><input type="radio" name="workWithCreators" value="Nee"><label>Nee</label></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Koppelingen andere kanalen -->
+                <div class="section">
+                    <h2 class="section-title"><span class="section-number">6</span>Koppelingen andere kanalen</h2>
+                    <div class="question-group">
+                        <label class="question-label">Welke social media kanalen zijn gelinkt aan jullie TikTok? (meerdere antwoorden mogelijk)</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item"><input type="checkbox" name="linkedChannels" value="Instagram"><label>Instagram</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="linkedChannels" value="Facebook"><label>Facebook</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="linkedChannels" value="YouTube"><label>YouTube</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="linkedChannels" value="Twitter/X"><label>Twitter/X</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="linkedChannels" value="LinkedIn"><label>LinkedIn</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="linkedChannels" value="Website"><label>Website</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="linkedChannels" value="Geen"><label>Geen</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="linkedChannels" value="Anders"><label>Anders, namelijk:</label></div>
+                        </div>
+                        <input type="text" class="text-input" name="linkedChannelsOther" placeholder="Specificeer indien van toepassing">
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Wordt TikTok-content automatisch gedeeld op andere kanalen?</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item"><input type="checkbox" name="autoShare" value="Ja, op Instagram"><label>Ja, op Instagram</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="autoShare" value="Ja, op Facebook"><label>Ja, op Facebook</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="autoShare" value="Ja, op YouTube"><label>Ja, op YouTube</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="autoShare" value="Ja, op Twitter/X"><label>Ja, op Twitter/X</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="autoShare" value="Ja, op LinkedIn"><label>Ja, op LinkedIn</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="autoShare" value="Nee"><label>Nee</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="autoShare" value="Anders"><label>Anders, namelijk:</label></div>
+                        </div>
+                        <input type="text" class="text-input" name="autoShareOther" placeholder="Specificeer indien van toepassing">
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Delen jullie content van andere kanalen op TikTok?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="shareToTikTok" value="Ja, regelmatig"><label>Ja, regelmatig</label></div>
+                            <div class="radio-item"><input type="radio" name="shareToTikTok" value="Ja, soms"><label>Ja, soms</label></div>
+                            <div class="radio-item"><input type="radio" name="shareToTikTok" value="Nee"><label>Nee</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Staat er een icon/knop op jullie website die naar het TikTok-account linkt?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="websiteLink" value="Ja"><label>Ja</label></div>
+                            <div class="radio-item"><input type="radio" name="websiteLink" value="Nee"><label>Nee</label></div>
+                            <div class="radio-item"><input type="radio" name="websiteLink" value="Weet niet"><label>Weet niet</label></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Berichten & Communicatie -->
+                <div class="section">
+                    <h2 class="section-title"><span class="section-number">7</span>Berichten & Communicatie</h2>
+                    <div class="question-group">
+                        <label class="question-label">Kunnen gebruikers privéberichten (DM's) sturen naar het account?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="dmEnabled" value="Ja"><label>Ja</label></div>
+                            <div class="radio-item"><input type="radio" name="dmEnabled" value="Nee"><label>Nee</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Wie mag berichten sturen?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="whoCanDM" value="Iedereen"><label>Iedereen</label></div>
+                            <div class="radio-item"><input type="radio" name="whoCanDM" value="Alleen volgers"><label>Alleen volgers</label></div>
+                            <div class="radio-item"><input type="radio" name="whoCanDM" value="Niemand"><label>Niemand</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Worden DM's beantwoord?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="dmAnswered" value="Ja, altijd"><label>Ja, altijd</label></div>
+                            <div class="radio-item"><input type="radio" name="dmAnswered" value="Ja, soms"><label>Ja, soms</label></div>
+                            <div class="radio-item"><input type="radio" name="dmAnswered" value="Nee"><label>Nee</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Is er een communicatiebeleid voor de omgang met reacties en DM's?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="commPolicy" value="Ja, schriftelijk vastgelegd"><label>Ja, schriftelijk vastgelegd</label></div>
+                            <div class="radio-item"><input type="radio" name="commPolicy" value="Ja, mondeling afgestemd"><label>Ja, mondeling afgestemd</label></div>
+                            <div class="radio-item"><input type="radio" name="commPolicy" value="Nee"><label>Nee</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Wat gebeurt er met DM's? (meerdere antwoorden mogelijk)</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item"><input type="checkbox" name="dmHandling" value="Direct beantwoorden"><label>Direct beantwoorden</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="dmHandling" value="Negeren"><label>Negeren</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="dmHandling" value="Archiveren"><label>Archiveren</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="dmHandling" value="Verwijderen na afhandeling"><label>Verwijderen na afhandeling</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="dmHandling" value="Anders"><label>Anders, namelijk:</label></div>
+                        </div>
+                        <input type="text" class="text-input" name="dmHandlingOther" placeholder="Specificeer indien van toepassing">
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Hoe lang worden DM's bewaard?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="dmRetention" value="Niet bewaard"><label>Niet bewaard</label></div>
+                            <div class="radio-item"><input type="radio" name="dmRetention" value="Tot afhandeling"><label>Tot afhandeling</label></div>
+                            <div class="radio-item"><input type="radio" name="dmRetention" value="1 maand"><label>1 maand</label></div>
+                            <div class="radio-item"><input type="radio" name="dmRetention" value="3 maanden"><label>3 maanden</label></div>
+                            <div class="radio-item"><input type="radio" name="dmRetention" value="6 maanden"><label>6 maanden</label></div>
+                            <div class="radio-item"><input type="radio" name="dmRetention" value="1 jaar"><label>1 jaar</label></div>
+                            <div class="radio-item"><input type="radio" name="dmRetention" value="Permanent"><label>Permanent</label></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Reacties onder posts -->
+                <div class="section">
+                    <h2 class="section-title"><span class="section-number">8</span>Reacties onder posts</h2>
+                    <div class="question-group">
+                        <label class="question-label">Hoe wordt omgegaan met reacties onder posts? (meerdere antwoorden mogelijk)</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item"><input type="checkbox" name="commentHandling" value="Alle reacties worden gelezen"><label>Alle reacties worden gelezen</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="commentHandling" value="Alleen reacties met vragen worden beantwoord"><label>Alleen reacties met vragen worden beantwoord</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="commentHandling" value="Alleen positieve reacties krijgen een like/hart"><label>Alleen positieve reacties krijgen een like/hart</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="commentHandling" value="Negatieve reacties worden beantwoord"><label>Negatieve reacties worden beantwoord</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="commentHandling" value="Negatieve reacties worden genegeerd"><label>Negatieve reacties worden genegeerd</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="commentHandling" value="Spam/ongepaste reacties worden verwijderd"><label>Spam/ongepaste reacties worden verwijderd</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="commentHandling" value="Alle reacties worden genegeerd"><label>Alle reacties worden genegeerd</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="commentHandling" value="AI moderatie"><label>AI moderatie</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="commentHandling" value="Er wordt niet gemodereerd"><label>Er wordt niet gemodereerd</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="commentHandling" value="Anders"><label>Anders, namelijk:</label></div>
+                        </div>
+                        <input type="text" class="text-input" name="commentHandlingOther" placeholder="Specificeer indien van toepassing">
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Worden reacties beantwoord?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="commentsAnswered" value="Ja, altijd"><label>Ja, altijd</label></div>
+                            <div class="radio-item"><input type="radio" name="commentsAnswered" value="Ja, vaak"><label>Ja, vaak</label></div>
+                            <div class="radio-item"><input type="radio" name="commentsAnswered" value="Ja, soms"><label>Ja, soms</label></div>
+                            <div class="radio-item"><input type="radio" name="commentsAnswered" value="Nee"><label>Nee</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Worden negatieve reacties verwijderd?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="negativeDeleted" value="Ja, altijd"><label>Ja, altijd</label></div>
+                            <div class="radio-item"><input type="radio" name="negativeDeleted" value="Ja, soms"><label>Ja, soms</label></div>
+                            <div class="radio-item"><input type="radio" name="negativeDeleted" value="Nee"><label>Nee</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Is er een beleid voor wanneer reacties verwijderd worden?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="deletionPolicy" value="Ja, schriftelijk vastgelegd"><label>Ja, schriftelijk vastgelegd</label></div>
+                            <div class="radio-item"><input type="radio" name="deletionPolicy" value="Ja, mondeling afgestemd"><label>Ja, mondeling afgestemd</label></div>
+                            <div class="radio-item"><input type="radio" name="deletionPolicy" value="Nee"><label>Nee</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Welke reacties worden verwijderd? (meerdere antwoorden mogelijk)</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item"><input type="checkbox" name="deletedComments" value="Spam"><label>Spam</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="deletedComments" value="Ongepaste/beledigende taal"><label>Ongepaste/beledigende taal</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="deletedComments" value="Haatdragende uitingen"><label>Haatdragende uitingen</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="deletedComments" value="Nepnieuws/desinformatie"><label>Nepnieuws/desinformatie</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="deletedComments" value="Commerciële/promotionele reacties"><label>Commerciële/promotionele reacties</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="deletedComments" value="Off-topic reacties"><label>Off-topic reacties</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="deletedComments" value="Negatieve reacties over de organisatie"><label>Negatieve reacties over de organisatie</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="deletedComments" value="Anders"><label>Anders, namelijk:</label></div>
+                        </div>
+                        <input type="text" class="text-input" name="deletedCommentsOther" placeholder="Specificeer indien van toepassing">
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Worden gebruikers geblokkeerd?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="usersBlocked" value="Ja, bij spam/ongepaste reacties"><label>Ja, bij spam/ongepaste reacties</label></div>
+                            <div class="radio-item"><input type="radio" name="usersBlocked" value="Ja, preventief"><label>Ja, preventief</label></div>
+                            <div class="radio-item"><input type="radio" name="usersBlocked" value="Nee"><label>Nee</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Is er een beleid voor het blokkeren van gebruikers?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="blockPolicy" value="Ja, schriftelijk vastgelegd"><label>Ja, schriftelijk vastgelegd</label></div>
+                            <div class="radio-item"><input type="radio" name="blockPolicy" value="Ja, mondeling afgestemd"><label>Ja, mondeling afgestemd</label></div>
+                            <div class="radio-item"><input type="radio" name="blockPolicy" value="Nee"><label>Nee</label></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Toegangsbeheer -->
+                <div class="section">
+                    <h2 class="section-title"><span class="section-number">9</span>Toegangsbeheer</h2>
+                    <div class="question-group">
+                        <label class="question-label">Hoeveel mensen hebben toegang tot het TikTok-account?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="accessPeople" value="1"><label>1</label></div>
+                            <div class="radio-item"><input type="radio" name="accessPeople" value="2"><label>2</label></div>
+                            <div class="radio-item"><input type="radio" name="accessPeople" value="3-5"><label>3-5</label></div>
+                            <div class="radio-item"><input type="radio" name="accessPeople" value="6-10"><label>6-10</label></div>
+                            <div class="radio-item"><input type="radio" name="accessPeople" value="Meer dan 10"><label>Meer dan 10</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Hoe krijgen medewerkers toegang? (meerdere antwoorden mogelijk)</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item"><input type="checkbox" name="accessMethod" value="Gedeeld wachtwoord"><label>Gedeeld wachtwoord</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="accessMethod" value="Via social media management tool"><label>Via social media management tool</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="accessMethod" value="Anders"><label>Anders, namelijk:</label></div>
+                        </div>
+                        <input type="text" class="text-input" name="accessMethodOther" placeholder="Specificeer indien van toepassing">
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Hebben verschillende medewerkers verschillende rechten?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="differentRights" value="Ja"><label>Ja</label></div>
+                            <div class="radio-item"><input type="radio" name="differentRights" value="Nee"><label>Nee</label></div>
+                            <div class="radio-item"><input type="radio" name="differentRights" value="Weet niet"><label>Weet niet</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Wie beheert het account? (meerdere antwoorden mogelijk)</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item"><input type="checkbox" name="accountManagement" value="Marketing/communicatie medewerker(s)"><label>Marketing/communicatie medewerker(s)</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="accountManagement" value="Social media manager"><label>Social media manager</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="accountManagement" value="Extern bureau"><label>Extern bureau</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="accountManagement" value="Stagiair"><label>Stagiair</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="accountManagement" value="Meerdere afdelingen"><label>Meerdere afdelingen</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="accountManagement" value="Anders"><label>Anders, namelijk:</label></div>
+                        </div>
+                        <input type="text" class="text-input" name="accountManagementOther" placeholder="Specificeer indien van toepassing">
+                    </div>
+                </div>
+
+                <!-- 10. Devices & Apparatuur -->
+                <div class="section">
+                    <h2 class="section-title"><span class="section-number">10</span>Devices & Apparatuur</h2>
+                    <div class="question-group">
+                        <label class="question-label">Vanaf welk type device(s) wordt er gepost? (meerdere antwoorden mogelijk)</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item"><input type="checkbox" name="deviceType" value="Smartphone"><label>Smartphone</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="deviceType" value="Tablet"><label>Tablet</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="deviceType" value="Desktop computer"><label>Desktop computer</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="deviceType" value="Laptop"><label>Laptop</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Zijn dit privé- of zakelijke devices?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="deviceOwnership" value="Alleen zakelijk"><label>Alleen zakelijk</label></div>
+                            <div class="radio-item"><input type="radio" name="deviceOwnership" value="Alleen privé"><label>Alleen privé</label></div>
+                            <div class="radio-item"><input type="radio" name="deviceOwnership" value="Combinatie"><label>Combinatie</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Hoeveel devices hebben toegang?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="deviceCount" value="1"><label>1</label></div>
+                            <div class="radio-item"><input type="radio" name="deviceCount" value="2"><label>2</label></div>
+                            <div class="radio-item"><input type="radio" name="deviceCount" value="3-5"><label>3-5</label></div>
+                            <div class="radio-item"><input type="radio" name="deviceCount" value="Meer dan 5"><label>Meer dan 5</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Is de TikTok-app geïnstalleerd of wordt de browser gebruikt?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="appOrBrowser" value="App"><label>App</label></div>
+                            <div class="radio-item"><input type="radio" name="appOrBrowser" value="Browser"><label>Browser</label></div>
+                            <div class="radio-item"><input type="radio" name="appOrBrowser" value="Beide"><label>Beide</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Worden er externe tools gebruikt voor contentcreatie?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="externalTools" value="Ja"><label>Ja, namelijk:</label></div>
+                            <div class="radio-item"><input type="radio" name="externalTools" value="Nee"><label>Nee</label></div>
+                        </div>
+                        <input type="text" class="text-input" name="externalToolsSpecify" placeholder="Welke tools?">
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Via welke netwerken wordt het TikTok-account beheerd? (meerdere antwoorden mogelijk)</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item"><input type="checkbox" name="networks" value="Bedrijfsnetwerk (kantoor)"><label>Bedrijfsnetwerk (kantoor)</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="networks" value="Beveiligd thuisnetwerk"><label>Beveiligd thuisnetwerk</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="networks" value="Mobiel netwerk (4G/5G)"><label>Mobiel netwerk (4G/5G)</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="networks" value="Openbare wifi"><label>Openbare wifi (café, station, etc.)</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="networks" value="Weet niet"><label>Weet niet</label></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11. Controleerbaarheid & Logging -->
+                <div class="section">
+                    <h2 class="section-title"><span class="section-number">11</span>Controleerbaarheid & Logging</h2>
+                    <div class="question-group">
+                        <label class="question-label">Is er een systeem om bij te houden wie wat heeft gepost?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="loggingSystem" value="Ja"><label>Ja</label></div>
+                            <div class="radio-item"><input type="radio" name="loggingSystem" value="Nee"><label>Nee</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Zo ja, hoe? (meerdere antwoorden mogelijk)</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item"><input type="checkbox" name="loggingMethod" value="Logboek/spreadsheet"><label>Logboek/spreadsheet</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="loggingMethod" value="In planning tool"><label>In planning tool</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="loggingMethod" value="Handmatige notitie"><label>Handmatige notitie</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="loggingMethod" value="Social media management systeem"><label>Social media management systeem</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="loggingMethod" value="Niet systematisch"><label>Niet systematisch</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="loggingMethod" value="Anders"><label>Anders, namelijk:</label></div>
+                        </div>
+                        <input type="text" class="text-input" name="loggingMethodOther" placeholder="Specificeer indien van toepassing">
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Is achteraf te herleiden wie een specifieke post heeft gepubliceerd?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="traceablePost" value="Ja, altijd"><label>Ja, altijd</label></div>
+                            <div class="radio-item"><input type="radio" name="traceablePost" value="Ja, meestal"><label>Ja, meestal</label></div>
+                            <div class="radio-item"><input type="radio" name="traceablePost" value="Nee"><label>Nee</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Is achteraf te herleiden wie op een reactie of DM heeft gereageerd?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="traceableReply" value="Ja, altijd"><label>Ja, altijd</label></div>
+                            <div class="radio-item"><input type="radio" name="traceableReply" value="Ja, meestal"><label>Ja, meestal</label></div>
+                            <div class="radio-item"><input type="radio" name="traceableReply" value="Nee"><label>Nee</label></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 12. Analytics & Rapportage -->
+                <div class="section">
+                    <h2 class="section-title"><span class="section-number">12</span>Analytics & Rapportage</h2>
+                    <div class="question-group">
+                        <label class="question-label">Wordt er gekeken naar statistieken?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="viewAnalytics" value="Ja, regelmatig"><label>Ja, regelmatig</label></div>
+                            <div class="radio-item"><input type="radio" name="viewAnalytics" value="Ja, soms"><label>Ja, soms</label></div>
+                            <div class="radio-item"><input type="radio" name="viewAnalytics" value="Nee"><label>Nee</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Welke metrics worden gevolgd? (meerdere antwoorden mogelijk)</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item"><input type="checkbox" name="metrics" value="Views"><label>Views</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="metrics" value="Likes"><label>Likes</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="metrics" value="Shares"><label>Shares</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="metrics" value="Comments"><label>Comments</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="metrics" value="Follower groei"><label>Follower groei</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="metrics" value="Profielweergaven"><label>Profielweergaven</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="metrics" value="Gemiddelde kijktijd"><label>Gemiddelde kijktijd</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="metrics" value="Video voltooid percentage"><label>Video voltooid percentage</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="metrics" value="Click-through rate"><label>Click-through rate</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="metrics" value="Conversies"><label>Conversies</label></div>
+                            <div class="checkbox-item"><input type="checkbox" name="metrics" value="Geen"><label>Geen</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Waar worden deze statistieken bekeken?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="analyticsWhere" value="In TikTok zelf"><label>In TikTok zelf</label></div>
+                            <div class="radio-item"><input type="radio" name="analyticsWhere" value="Externe tool"><label>Externe tool</label></div>
+                            <div class="radio-item"><input type="radio" name="analyticsWhere" value="Social media dashboard"><label>Social media dashboard</label></div>
+                            <div class="radio-item"><input type="radio" name="analyticsWhere" value="Niet van toepassing"><label>Niet van toepassing</label></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 13. Beveiliging -->
+                <div class="section">
+                    <h2 class="section-title"><span class="section-number">13</span>Beveiliging</h2>
+                    <div class="question-group">
+                        <label class="question-label">Gebruiken jullie two-factor authenticatie (2FA)?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="twoFactorAuth" value="Ja"><label>Ja</label></div>
+                            <div class="radio-item"><input type="radio" name="twoFactorAuth" value="Nee"><label>Nee</label></div>
+                            <div class="radio-item"><input type="radio" name="twoFactorAuth" value="Weet niet"><label>Weet niet</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Hoe worden inloggegevens beheerd?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="passwordManagement" value="Wachtwoordmanager"><label>Wachtwoordmanager</label></div>
+                            <div class="radio-item"><input type="radio" name="passwordManagement" value="Gedeeld document"><label>Gedeeld document</label></div>
+                            <div class="radio-item"><input type="radio" name="passwordManagement" value="Individueel beheerd"><label>Individueel beheerd</label></div>
+                            <div class="radio-item"><input type="radio" name="passwordManagement" value="Anders"><label>Anders, namelijk:</label></div>
+                        </div>
+                        <input type="text" class="text-input" name="passwordManagementOther" placeholder="Specificeer indien van toepassing">
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Is het account beveiligd met een sterk wachtwoord?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="strongPassword" value="Ja"><label>Ja</label></div>
+                            <div class="radio-item"><input type="radio" name="strongPassword" value="Nee"><label>Nee</label></div>
+                            <div class="radio-item"><input type="radio" name="strongPassword" value="Weet niet"><label>Weet niet</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Wordt het wachtwoord regelmatig gewijzigd?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="passwordChange" value="Ja, elke ... maanden"><label>Ja, elke ... maanden</label></div>
+                            <div class="radio-item"><input type="radio" name="passwordChange" value="Bij uitdiensttreding"><label>Bij uitdiensttreding</label></div>
+                            <div class="radio-item"><input type="radio" name="passwordChange" value="Nee"><label>Nee</label></div>
+                        </div>
+                        <input type="text" class="text-input" name="passwordChangeMonths" placeholder="Aantal maanden (indien van toepassing)">
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Is er een proces voor het intrekken van toegang bij uitdiensttreding?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="revokeAccess" value="Ja, vastgelegd"><label>Ja, vastgelegd</label></div>
+                            <div class="radio-item"><input type="radio" name="revokeAccess" value="Gebeurt ad hoc"><label>Gebeurt ad hoc</label></div>
+                            <div class="radio-item"><input type="radio" name="revokeAccess" value="Nee"><label>Nee</label></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 14. Beleid & Documentatie -->
+                <div class="section">
+                    <h2 class="section-title"><span class="section-number">14</span>Beleid & Documentatie</h2>
+                    <div class="question-group">
+                        <label class="question-label">Is het gebruik van TikTok opgenomen in het verwerkingsregister van de organisatie?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="processingRegister" value="Ja"><label>Ja</label></div>
+                            <div class="radio-item"><input type="radio" name="processingRegister" value="Nee"><label>Nee</label></div>
+                            <div class="radio-item"><input type="radio" name="processingRegister" value="Weet niet"><label>Weet niet</label></div>
+                            <div class="radio-item"><input type="radio" name="processingRegister" value="Organisatie heeft geen verwerkingsregister"><label>Organisatie heeft geen verwerkingsregister</label></div>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <label class="question-label">Informeert de privacyverklaring bezoekers/volgers over het gebruik van TikTok?</label>
+                        <div class="radio-group">
+                            <div class="radio-item"><input type="radio" name="privacyStatement" value="Ja, TikTok wordt specifiek genoemd"><label>Ja, TikTok wordt specifiek genoemd</label></div>
+                            <div class="radio-item"><input type="radio" name="privacyStatement" value="Ja, sociale media worden algemeen genoemd"><label>Ja, sociale media worden algemeen genoemd</label></div>
+                            <div class="radio-item"><input type="radio" name="privacyStatement" value="Nee"><label>Nee</label></div>
+                            <div class="radio-item"><input type="radio" name="privacyStatement" value="Weet niet"><label>Weet niet</label></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 15. Overige informatie -->
+                <div class="section">
+                    <h2 class="section-title"><span class="section-number">15</span>Overige informatie</h2>
+                    <div class="question-group">
+                        <label class="question-label">Aanvullende opmerkingen of toelichting</label>
+                        <textarea class="textarea-input" name="additionalComments" placeholder="Voer hier eventuele aanvullende opmerkingen of toelichting in..."></textarea>
+                    </div>
+                </div>
 
                 <!-- Submit Section -->
                 <div class="submit-section">
@@ -209,7 +935,7 @@
     </div>
 
     <script>
-        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/library/d/1geu8-n8bUIrkNNoIjvX_tRTVDkPcF1fUxB_6rzP2QJyC7aPMgpzU6ixp/2';
+        const GOOGLE_SCRIPT_URL = 'VERVANG_MET_JOUW_GOOGLE_SCRIPT_URL';
 
         document.getElementById('tiktokForm').addEventListener('submit', async function(e) {
             e.preventDefault();
